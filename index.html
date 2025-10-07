@@ -1,10 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hello World App</title>
+  <title>Hello Secure World</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f7f9fb;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #0078d7;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
 </head>
-<body style="font-family: Arial; text-align: center; margin-top: 100px;">
-    <h1>Hello World from Azure Static Web App 🚀</h1>
-    <p>This is your first deployed web app!</p>
+<body>
+  <h1>Hello World from Azure Static Web App 🚀</h1>
+  <p>Welcome to your first secure web app!</p>
+
+  <div id="auth-buttons">
+    <button onclick="login()">Login with GitHub</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script>
+    function login() {
+      window.location.href = '/.auth/login/github';
+    }
+
+    function logout() {
+      window.location.href = '/.auth/logout';
+    }
+  </script>
 </body>
 </html>
